@@ -1,6 +1,11 @@
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import BottomNav from "@/components/BottomNav";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "わんこ家族カレンダー",
+};
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const supabase = await createClient();
